@@ -1,0 +1,33 @@
+* {
+  background-color: #3e5aed;
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectName {
+  color: white;
+  font-size: 150px;
+  margin-top: 250px;
+}
+
+.connect-wallet-btn {
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1e4098;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: -120px;
+}
+
+.connect-wallet-btn:hover {
+  background-color: #091a46;
+}

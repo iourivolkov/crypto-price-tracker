@@ -1,7 +1,14 @@
 import "./App.css";
+import LandingPage from "./components/LandingPage";
 
 function App() {
-  return <div className="App"></div>;
+  const title = "Trackr";
+  const subtitle = "For all your crypto needs";
+  return (
+    <div className="App">
+      <LandingPage projectName={title} projectSlogan={subtitle} />
+    </div>
+  );
 }
 
 export default App;
