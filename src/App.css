@@ -16,18 +16,24 @@
 }
 
 .connect-wallet-btn {
-  width: 200px;
+  width: 160px;
   height: 60px;
   border: none;
-  border-radius: 10px;
-  background-color: #1e4098;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(10, 8, 121);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: -120px;
+  margin-top: 20px;
 }
 
 .connect-wallet-btn:hover {
   background-color: #091a46;
+  color: white;
+}
+
+.project-slogan {
+  color: white;
+  font-weight: 300;
+  margin-top: -140px;
 }
