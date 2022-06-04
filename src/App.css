@@ -108,11 +108,64 @@
 }
 
 .price-data-card {
-  background-color: #c82ff7;
+  background-color: #dbdbdb;
   width: 720px;
   height: 475px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.price-data-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.token-name {
+  font-weight: bold;
+  font-size: 44px;
+  margin-right: 310px;
+}
+
+.token-symbol {
+  font-weight: bold;
+  font-size: 44px;
+}
+
+.price-chart {
+  width: 575px;
+  height: 195px;
+}
+
+.token-price-change {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.token-price {
+  font-weight: bold;
+  font-size: 44px;
+  margin-right: 180px;
+}
+
+.price-change {
+  font-weight: bold;
+  font-size: 44px;
+  color: rgb(43, 151, 43);
+}
+
+.mc-dv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 310px;
+}
+
+.price-card-group {
+  display: flex;
+  flex-direction: row;
 }
