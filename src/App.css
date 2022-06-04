@@ -169,3 +169,50 @@
   display: flex;
   flex-direction: row;
 }
+
+.top10mc {
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  margin-left: 100px;
+}
+
+.footer-card-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-price-card {
+  width: 230px;
+  height: 250px;
+  border: 3px solid rgb(226, 226, 226);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-token-name,
+.footer-token-symbol {
+  font-size: 22px;
+}
+
+.footer-token-name {
+  margin-right: 40px;
+}
+
+.footer-token-price {
+  font-size: 36px;
+}
+
+.footer-perc-change {
+  font-size: 30px;
+  color: green;
+}
