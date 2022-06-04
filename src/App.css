@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #3e5aed;
+  height: 800px;
 }
 
 .projectName {
@@ -84,7 +85,6 @@
   font-size: 16px;
   border: none;
   text-align: center;
-  border-radius: 5px;
 }
 
 .token-query-btn {
@@ -96,7 +96,6 @@
   height: 42px;
   cursor: pointer;
   margin-left: 15px;
-  border-radius: 5px;
 }
 
 .price-query {
