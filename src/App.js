@@ -1,7 +1,7 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import Navigation from "./components/Navigation";
-import PriceQueryCard from "./components/PriceQueryCard";
+
 import PriceHero from "./components/PriceHero";
 
 function App() {
