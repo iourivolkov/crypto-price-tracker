@@ -6,7 +6,7 @@ import Top10List from "./components/Top10List";
 
 function App() {
   const title = "Trackr";
-  const subtitle = "For all your crypto pricing needs";
+  const subtitle = "Track crypto and NFTs from one spot";
   const titleFooter = "Top 10 Marketcap";
 
   return (

@@ -2,7 +2,7 @@ import FooterPriceCard from "./FooterPriceCard";
 
 const Top10List = ({ footerTitle }) => {
   return (
-    <div>
+    <div className="footer-component">
       <h2 className="top10mc">{footerTitle}</h2>
       <div className="footer-card-list">
         <FooterPriceCard />
