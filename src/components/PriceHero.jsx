@@ -15,7 +15,12 @@ const PriceHero = ({
         inputText={inputText}
         getPrice={getPrice}
       />
-      {displayPriceData && <PriceDataCard tokenData={priceQueryData} />}
+      {displayPriceData && (
+        <PriceDataCard
+          tokenData={priceQueryData}
+          displayPriceData={displayPriceData}
+        />
+      )}
     </div>
   );
 };

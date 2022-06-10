@@ -20,6 +20,7 @@ function App() {
   // captures user input in price query search
   const handleInputText = (e) => {
     setInputText(e.target.value);
+    // @todo -> add logic to uppercase the first letter of input string - otherwise API will not return result
     // inputText.charAt(0).toUpperCase();
   };
 
@@ -36,24 +37,13 @@ function App() {
       .get("https://api.coinlore.net/api/tickers/", config)
       .then((res) => {
         const priceResponse = res.data.data;
-        // get arr of objects [{}, {}, {}...]
+        // data comes back as arr of objects [{}, {}, {}...]
 
         priceResponse.filter((el) => {
           if (el.name === inputText) {
             console.log(el);
             setPriceData(el);
             setIsPriceVisible(true);
-            // setIndivPriceData(el);
-            // return (
-            //   <PriceDataCard
-            //     tokenName={el.name}
-            //     tokenSymbol={el.symbol}
-            //     tokenPrice={el.price_usd}
-            //     priceChange={el.percent_change_24h}
-            //     marketCap={el.market_cap_usd}
-            //     dailyVol={el.volume24}
-            //   />
-            // );
           }
         });
       })
@@ -72,7 +62,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <LandingPage projectName={title} projectSlogan={subtitle} /> */}
+      <LandingPage projectName={title} projectSlogan={subtitle} />
       <Navigation projectName={title} />
       <PriceHero
         inputText={handleInputText}

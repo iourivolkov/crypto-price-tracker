@@ -1,12 +1,18 @@
-const PriceDataCard = ({ tokenData }) => {
+import PriceChart from "./PriceChart";
+
+const PriceDataCard = ({ tokenData, displayPriceData }) => {
   console.log(tokenData);
   return (
-    <div className="price-data-card">
+    <div
+      className={
+        displayPriceData ? "price-data-card-response" : "price-data-card-blank"
+      }
+    >
       <header className="price-data-header">
         <div className="token-name">{tokenData.name}</div>
         <div className="token-symbol">{tokenData.symbol}</div>
       </header>
-      {/* <img className="price-chart" src="" alt="price-chart" /> */}
+      <PriceChart />
       <section className="token-price-change">
         <div className="token-price">${tokenData.price_usd} USD</div>
         <div
