@@ -1,21 +1,22 @@
-const PriceDataCard = () => {
+const PriceDataCard = ({ tokenData }) => {
+  console.log(tokenData);
   return (
     <div className="price-data-card">
       <header className="price-data-header">
-        <div className="token-name">Bitcoin</div>
-        <div className="token-symbol">BTC</div>
+        <div className="token-name">{tokenData.name}</div>
+        <div className="token-symbol">{tokenData.symbol}</div>
       </header>
-      <img className="price-chart" src="" alt="price-chart" />
+      {/* <img className="price-chart" src="" alt="price-chart" /> */}
       <section className="token-price-change">
-        <div className="token-price">$39,938.23</div>
-        <div className="price-change">+1.02%</div>
+        <div className="token-price">${tokenData.price_usd} USD</div>
+        <div className="price-change">{tokenData.percent_change_24h} %</div>
       </section>
       <section className="mc-dv">
         <div className="market-cap">
-          <b>Market Cap:</b> $1,989,383,438.43
+          <b>Market Cap:</b> ${tokenData.market_cap_usd}
         </div>
         <div className="daily-volume">
-          <b>24hr Volume:</b> $987,438,438,28
+          <b>24hr Volume:</b> ${tokenData.volume24}
         </div>
       </section>
     </div>

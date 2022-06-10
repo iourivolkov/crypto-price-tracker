@@ -1,7 +1,12 @@
 import PriceQueryCard from "./PriceQueryCard";
 import PriceDataCard from "./PriceDataCard";
 
-const PriceHero = ({ inputText, getPrice }) => {
+const PriceHero = ({
+  inputText,
+  getPrice,
+  priceQueryData,
+  displayPriceData,
+}) => {
   const cryptoPriceQuery = "What's the price of..";
   return (
     <div className="price-card-group">
@@ -10,7 +15,7 @@ const PriceHero = ({ inputText, getPrice }) => {
         inputText={inputText}
         getPrice={getPrice}
       />
-      <PriceDataCard />
+      {displayPriceData && <PriceDataCard tokenData={priceQueryData} />}
     </div>
   );
 };
