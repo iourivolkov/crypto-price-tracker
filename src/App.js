@@ -20,6 +20,7 @@ function App() {
   // captures user input in price query search
   const handleInputText = (e) => {
     setInputText(e.target.value);
+    // inputText.charAt(0).toUpperCase();
   };
 
   // called when user clicks "search" on price query

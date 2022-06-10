@@ -158,6 +158,18 @@
   color: rgb(43, 151, 43);
 }
 
+.positive {
+  font-weight: bold;
+  font-size: 44px;
+  color: rgb(43, 151, 43);
+}
+
+.negative {
+  font-weight: bold;
+  font-size: 44px;
+  color: rgb(245, 55, 55);
+}
+
 .mc-dv {
   display: flex;
   flex-direction: column;

@@ -9,7 +9,13 @@ const PriceDataCard = ({ tokenData }) => {
       {/* <img className="price-chart" src="" alt="price-chart" /> */}
       <section className="token-price-change">
         <div className="token-price">${tokenData.price_usd} USD</div>
-        <div className="price-change">{tokenData.percent_change_24h} %</div>
+        <div
+          className={
+            tokenData.percent_change_24h >= 0 ? "positive" : "negative"
+          }
+        >
+          {tokenData.percent_change_24h} %
+        </div>
       </section>
       <section className="mc-dv">
         <div className="market-cap">
