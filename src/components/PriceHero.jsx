@@ -6,6 +6,7 @@ const PriceHero = ({
   getPrice,
   priceQueryData,
   displayPriceData,
+  inputPrice,
 }) => {
   const cryptoPriceQuery = "What's the price of..";
   return (
@@ -19,6 +20,7 @@ const PriceHero = ({
         <PriceDataCard
           tokenData={priceQueryData}
           displayPriceData={displayPriceData}
+          inputPrice={inputPrice}
         />
       )}
     </div>

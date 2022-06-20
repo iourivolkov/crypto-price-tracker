@@ -6,11 +6,12 @@ import Top10List from "./components/Top10List";
 import { useState } from "react";
 import axios from "axios";
 import PriceDataCard from "./components/PriceDataCard";
+import PriceChart from "./components/PriceChart";
 
 function App() {
   const title = "Trackr";
   const subtitle = "Track crypto and NFTs from one spot";
-  const titleFooter = "Top 10 Marketcap";
+  const titleFooter = "Top 100";
   const [isPriceVisible, setIsPriceVisible] = useState(false);
   // manages priceQuery component state (user price search input)
   const [inputText, setInputText] = useState("");
@@ -69,7 +70,9 @@ function App() {
         getPrice={fetchQueryData}
         priceQueryData={priceData}
         displayPriceData={isPriceVisible}
+        inputPrice={inputText}
       />
+
       {/* <Top10List footerTitle={titleFooter} /> */}
     </div>
   );
