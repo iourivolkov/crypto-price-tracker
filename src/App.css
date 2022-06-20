@@ -262,3 +262,17 @@
 .footer-component {
   margin-bottom: 40px;
 }
+
+.price-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  border: 1px solid rgb(65, 65, 65);
+  padding: 10px;
+  color: rgb(36, 36, 36);
+}
