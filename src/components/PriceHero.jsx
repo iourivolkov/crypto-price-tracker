@@ -7,6 +7,7 @@ const PriceHero = ({
   priceQueryData,
   displayPriceData,
   inputPrice,
+  tokenSymbol,
 }) => {
   const cryptoPriceQuery = "What's the price of..";
   return (
@@ -21,6 +22,7 @@ const PriceHero = ({
           tokenData={priceQueryData}
           displayPriceData={displayPriceData}
           inputPrice={inputPrice}
+          tokenSymbol={tokenSymbol}
         />
       )}
     </div>

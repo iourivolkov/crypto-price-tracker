@@ -1,6 +1,11 @@
 import PriceChart from "./PriceChart";
 
-const PriceDataCard = ({ tokenData, displayPriceData, inputPrice }) => {
+const PriceDataCard = ({
+  tokenData,
+  displayPriceData,
+  inputPrice,
+  tokenSymbol,
+}) => {
   console.log(tokenData);
   return (
     <div className="price-data-card">
@@ -8,7 +13,7 @@ const PriceDataCard = ({ tokenData, displayPriceData, inputPrice }) => {
         <div className="token-name">{tokenData.name}</div>
         <div className="token-symbol">{tokenData.symbol}</div>
       </header>
-      <PriceChart inputPrice={inputPrice} />
+      <PriceChart inputPrice={inputPrice} tokenSymbol={tokenSymbol} />
       <section className="token-price-change">
         <div className="token-price">${tokenData.price_usd} USD</div>
         <div

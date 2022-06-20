@@ -5,7 +5,6 @@ import PriceHero from "./components/PriceHero";
 import Top10List from "./components/Top10List";
 import { useState } from "react";
 import axios from "axios";
-import PriceDataCard from "./components/PriceDataCard";
 import PriceChart from "./components/PriceChart";
 
 function App() {
@@ -17,6 +16,9 @@ function App() {
   const [inputText, setInputText] = useState("");
   // manages response from api call for user price search
   const [priceData, setPriceData] = useState();
+
+  // captures asset symbol, to be used in market data API call
+  const [tokenSymbol, setTokenSymbol] = useState("");
 
   // captures user input in price query search
   const handleInputText = (e) => {
@@ -42,7 +44,8 @@ function App() {
 
         priceResponse.filter((el) => {
           if (el.name === inputText) {
-            console.log(el);
+            console.log(el.symbol);
+            setTokenSymbol(el.symbol);
             setPriceData(el);
             setIsPriceVisible(true);
           }
@@ -61,6 +64,8 @@ function App() {
       });
   };
 
+  // @todo - refactor -> remove useState hooks and use Context instead
+
   return (
     <div className="App">
       <LandingPage projectName={title} projectSlogan={subtitle} />
@@ -71,6 +76,7 @@ function App() {
         priceQueryData={priceData}
         displayPriceData={isPriceVisible}
         inputPrice={inputText}
+        tokenSymbol={tokenSymbol}
       />
 
       {/* <Top10List footerTitle={titleFooter} /> */}
