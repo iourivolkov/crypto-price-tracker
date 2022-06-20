@@ -6,6 +6,11 @@ const PriceList = () => {
     <div>
       <PriceListHeader />
       <PriceRow />
+      <PriceRow />
+      <PriceRow />
+      <PriceRow />
+      <PriceRow />
+      <PriceRow />
     </div>
   );
 };
