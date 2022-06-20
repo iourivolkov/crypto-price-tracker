@@ -6,6 +6,7 @@ import Top10List from "./components/Top10List";
 import { useState } from "react";
 import axios from "axios";
 import PriceChart from "./components/PriceChart";
+import PriceList from "./components/PriceList";
 
 function App() {
   const title = "Trackr";
@@ -78,6 +79,7 @@ function App() {
         inputPrice={inputText}
         tokenSymbol={tokenSymbol}
       />
+      <PriceList />
 
       {/* <Top10List footerTitle={titleFooter} /> */}
     </div>
