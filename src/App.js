@@ -75,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <LandingPage projectName={title} projectSlogan={subtitle} />
+      {/* <LandingPage projectName={title} projectSlogan={subtitle} /> */}
       <Navigation projectName={title} />
       <PriceHero
         inputText={handleInputText}

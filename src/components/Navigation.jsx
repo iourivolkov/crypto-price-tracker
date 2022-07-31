@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+
 const Navigation = ({ projectName }) => {
   return (
     <div>
@@ -5,10 +7,20 @@ const Navigation = ({ projectName }) => {
         <li id="logo" className="logo">
           {projectName}
         </li>
-        {/* <div className="links">
-          <li className="crypto-link">crypto</li>
-          <li className="nft-link">NFTs</li>
-        </div> */}
+        <div className="links">
+          <Button
+            variant="outlined"
+            disableRipple
+            type="button"
+            size="small"
+            sx={{
+              height: "40px",
+              width: "150px",
+            }}
+          >
+            Connect Wallet
+          </Button>
+        </div>
       </ul>
     </div>
   );
