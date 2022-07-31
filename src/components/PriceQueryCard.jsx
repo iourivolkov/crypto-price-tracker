@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+
 const PriceQueryCard = ({ queryTitle, inputText, getPrice }) => {
   return (
     <div className="price-query-card">
@@ -8,9 +10,27 @@ const PriceQueryCard = ({ queryTitle, inputText, getPrice }) => {
           placeholder="Enter token name..."
           onChange={inputText}
         ></input>
-        <button type="submit" className="token-query-btn" onClick={getPrice}>
+        <Button
+          type="submit"
+          onClick={getPrice}
+          disableRipple
+          variant="contained"
+          size="small"
+          sx={{
+            fill: "none",
+            color: "white",
+            bgcolor: "#2099b4",
+            border: "none",
+            width: "80px",
+            height: "42px",
+            cursor: "pointer",
+            marginLeft: "15px",
+            fontWeight: "bold",
+            borderRadius: "none",
+          }}
+        >
           search
-        </button>
+        </Button>
       </form>
     </div>
   );

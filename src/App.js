@@ -85,7 +85,7 @@ function App() {
         inputPrice={inputText}
         tokenSymbol={tokenSymbol}
       />
-      <PriceList />
+      {/* <PriceList /> */}
 
       {/* <Top10List footerTitle={titleFooter} /> */}
     </div>
