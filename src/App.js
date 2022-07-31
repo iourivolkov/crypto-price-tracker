@@ -3,7 +3,7 @@ import LandingPage from "./components/LandingPage";
 import Navigation from "./components/Navigation";
 import PriceHero from "./components/PriceHero";
 import Top10List from "./components/Top10List";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import PriceChart from "./components/PriceChart";
 import PriceList from "./components/PriceList";
@@ -43,7 +43,7 @@ function App() {
         const priceResponse = res.data.data;
         // data comes back as arr of objects [{}, {}, {}...]
 
-        priceResponse.filter((el) => {
+        priceResponse?.filter((el) => {
           if (el.name === inputText) {
             console.log(el.symbol);
             setTokenSymbol(el.symbol);
@@ -63,6 +63,12 @@ function App() {
           console.log("ERROR!", err.message);
         }
       });
+  };
+
+  const fetchTopData = (e) => {
+    e.preventDefault();
+
+    // @todo - make an axios API call to get price data for top 100 cryptos
   };
 
   // @todo - refactor -> remove useState hooks and use Context instead
